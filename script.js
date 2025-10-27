@@ -32,7 +32,7 @@ try {
 
 // Sign in anonymously and get database reference
 firebase.auth().signInAnonymously().then(() => {
-	var database = firebase.database();
+	database = firebase.database();
 	
 	// Optional: test connection
 	database.ref("/testServer").once("value", function(snapshot) {
