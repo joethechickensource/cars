@@ -453,7 +453,7 @@ host = function(){
 }
 
 joinGame = function(){
-	fadeOut(loop);
+	fadeOut(menuMusic);
 	document.getElementById("join").onclick = null;
 	f.style.transform = "translate3d(0, -100vh, 0)";
 	setTimeout(function(){
