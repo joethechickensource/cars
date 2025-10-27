@@ -10,6 +10,33 @@ var MOUNTAIN_DIST = 250;
 var OOB_DIST = 200;
 var LAPS = 3;
 
+// --- Menu music setup ---
+const menuMusic = new Audio("menuloop.wav");
+menuMusic.loop = true;
+menuMusic.volume = 0; // start silent
+
+// Fade helpers
+function fadeIn(audio, duration = 1000) {
+  const step = 1 / (duration / 50);
+  audio.volume = 0;
+  audio.play();
+  const fade = setInterval(() => {
+    audio.volume = Math.min(1, audio.volume + step);
+    if (audio.volume >= 1) clearInterval(fade);
+  }, 50);
+}
+
+function fadeOut(audio, duration = 1000) {
+  const step = audio.volume / (duration / 50);
+  const fade = setInterval(() => {
+    audio.volume = Math.max(0, audio.volume - step);
+    if (audio.volume <= 0) {
+      clearInterval(fade);
+      audio.pause();
+    }
+  }, 50);
+}
+
 function MODS() {}
 
 var firebaseConfig = {
