@@ -265,7 +265,7 @@ updateColor = function(){
 updateColor();
 
 menu2 = function(){
-	fadeIn()
+	fadeIn(menuMusic)
 	if(mobile){
 		function reactOrientation(e){
 			var angle = screen.orientation.type == "portrait-primary" ? e.gamma : screen.orientation.type == "portrait-secondary" ? -e.gamma : screen.orientation.type == "landscape-primary" ? e.beta : screen.orientation.type == "landscape-secondary" ? -e.beta : 0;
