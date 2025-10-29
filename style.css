@@ -141,8 +141,8 @@ input{
 	height: 15vmin;
 	width: 15vmin;
 	position: absolute;
-	bottom: 10vmin;
-	left: 10vmin;
+	bottom: 5vmin;
+	left: 5vmin;
 	transition: -webkit-transform .2s;
 	transition: transform .2s;
 	transition: transform .2s, -webkit-transform .2s;
