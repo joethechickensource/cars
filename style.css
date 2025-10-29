@@ -138,13 +138,11 @@ input{
 	content: "";
 	background-image: url("https://breadedtuna.github.io/cars/wikimode.png");
 	background-size: cover;
-	height: 10vmin;
-	width: 10vmin;
+	height: 15vmin;
+	width: 15vmin;
 	position: absolute;
-	bottom: 5vmin;
-	left: 5vmin;
-	-webkit-filter: invert(1);
-	        filter: invert(1);
+	bottom: 10vmin;
+	left: 10vmin;
 	transition: -webkit-transform .2s;
 	transition: transform .2s;
 	transition: transform .2s, -webkit-transform .2s;
