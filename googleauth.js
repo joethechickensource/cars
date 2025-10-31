@@ -1,26 +1,41 @@
-// googleauth.js  (for Firebase 7.22.1)
-// Requires that firebase-app.js, firebase-auth.js, firebase-database.js etc. are already loaded
-// and firebase.initializeApp(...) has already run in your main script.
-
+// googleauth.js  – for Firebase 7.22.1
+// assumes firebase.initializeApp(...) already ran in your main script
 (function() {
-  // --- UI element for status text ---
+  /* ------------------  Small status text  ------------------ */
   var statusText = document.createElement("div");
   statusText.id = "google-login-status";
-  statusText.style.position = "fixed";
-  statusText.style.left = "50%";
-  statusText.style.bottom = "10px";
-  statusText.style.transform = "translateX(-50%)";
-  statusText.style.background = "rgba(0,0,0,0.6)";
-  statusText.style.color = "#fff";
-  statusText.style.padding = "6px 10px";
-  statusText.style.borderRadius = "8px";
-  statusText.style.fontFamily = "sans-serif";
-  statusText.style.fontSize = "14px";
-  statusText.style.zIndex = "9999";
-  statusText.innerText = "Not signed in (anonymous)";
+  Object.assign(statusText.style, {
+    position: "fixed",
+    left: "50%",
+    bottom: "10px",
+    transform: "translateX(-50%)",
+    background: "rgba(0,0,0,0.6)",
+    color: "#fff",
+    padding: "6px 10px",
+    borderRadius: "8px",
+    fontFamily: "sans-serif",
+    fontSize: "14px",
+    zIndex: "9999"
+  });
+  statusText.textContent = "Not signed in (anonymous)";
   document.body.appendChild(statusText);
 
-  // --- Keybind listener ---
+  /* ------------------  Google sign-in logic  ------------------ */
+  function googleLogin() {
+    var provider = new firebase.auth.GoogleAuthProvider();
+    firebase.auth().signInWithPopup(provider)
+      .then(function(result) {
+        var user = result.user;
+        console.log("✅ Google sign-in success:", user.email);
+        statusText.textContent = "Signed in as " + user.email;
+      })
+      .catch(function(error) {
+        console.error("❌ Google sign-in error:", error);
+        statusText.textContent = "Sign-in failed: " + (error.message || error.code);
+      });
+  }
+
+  /* ------------------  Desktop shortcut  ------------------ */
   window.addEventListener("keydown", function(e) {
     if ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key.toLowerCase() === "g") {
       e.preventDefault();
@@ -28,30 +43,43 @@
     }
   });
 
-  function googleLogin() {
-    var provider = new firebase.auth.GoogleAuthProvider();
-    firebase.auth().signInWithPopup(provider)
-      .then(function(result) {
-        var user = result.user;
-        console.log("✅ Google sign-in success:", user.email);
-        statusText.innerText = "Signed in as " + user.email;
-      })
-      .catch(function(error) {
-        console.error("❌ Google sign-in error:", error);
-        statusText.innerText = "Sign-in failed: " + (error.message || error.code);
-      });
-  }
+  /* ------------------  Mobile secret tap zone  ------------------ */
+  var tapZone = document.createElement("div");
+  Object.assign(tapZone.style, {
+    position: "fixed",
+    top: "0",
+    right: "0",
+    width: "80px",
+    height: "80px",
+    background: "transparent",
+    zIndex: "9999"
+  });
+  document.body.appendChild(tapZone);
 
-  // --- Update status on auth changes ---
+  var tapCount = 0;
+  var tapTimer;
+  tapZone.addEventListener("touchstart", function() {
+    tapCount++;
+    clearTimeout(tapTimer);
+    if (tapCount >= 5) {
+      tapCount = 0;
+      console.log("📱 Secret mobile tap detected – launching Google sign-in");
+      googleLogin();
+      return;
+    }
+    // reset counter if more than 2 s between taps
+    tapTimer = setTimeout(function() { tapCount = 0; }, 2000);
+  });
+
+  /* ------------------  Auth state watcher  ------------------ */
   firebase.auth().onAuthStateChanged(function(user) {
     if (user && user.email) {
+      statusText.textContent = "Signed in as " + user.email;
       console.log("Currently signed in as:", user.email);
-      statusText.innerText = "Signed in as " + user.email;
     } else if (user) {
-      // anonymous
-      statusText.innerText = "Signed in anonymously";
+      statusText.textContent = "Signed in anonymously";
     } else {
-      statusText.innerText = "Not signed in";
+      statusText.textContent = "Not signed in";
     }
   });
 })();
