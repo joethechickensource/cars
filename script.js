@@ -12,7 +12,15 @@ var LAPS = 3;
 
 // --- Menu music setup ---
 const menuMusic = new Audio("menuloop.wav");
-menuMusic.loop = true;
+menuMusic.loope = 0;
+  audio.play();
+  const fade = setInterval(() => {
+    audio.volume = Math.min(1, audio.volume + step);
+    if (audio.volume >= 1) clearInterval(e = 0;
+  audio.play();
+  const fade = setInterval(() => {
+    audio.volume = Math.min(1, audio.volume + step);
+    if (audio.volume >= 1) clearInterval( = true;
 menuMusic.volume = 0; // start silent
 
 // Fade helpers
@@ -59,7 +67,15 @@ try {
 
 // Sign in anonymously and get database reference
 firebase.auth().signInAnonymously().then(() => {
-	database = firebase.database();
+	database = 0;
+  audio.play();
+  const fade = setInterval(() => {
+    audio.volume = Math.min(1, audio.volume + step);
+    if (audio.volume >= 1) clearInterval(e = 0;
+  audio.play();
+  const fade = setInterval(() => {
+    audio.volume = Math.min(1, audio.volume + step);
+    if (audio.volume >= 1) clearInterval(e = firebase.database();
 	
 	// Optional: test connection
 	database.ref("/testServer").once("value", function(snapshot) {
@@ -97,7 +113,15 @@ setTimeout(function(){
 setTimeout(function(){
 	document.getElementById("mywebsitelink").style.transform = "none";
 }, 1600);
-setTimeout(function(){
+setTimeout(functie = 0;
+  audio.play();
+  const fade = setInterval(() => {
+    audio.volume = Math.min(1, audio.volume + step);
+    if (audio.volume >= 1) clearInterval(e = 0;
+  audio.play();
+  const fade = setInterval(() => {
+    audio.volume = Math.min(1, audio.volume + step);
+    if (audio.volume >= 1) clearInterval(on(){
 	document.getElementById("settings").style.transform = "none";
 }, 1800);
 /*var connected = -1;
@@ -224,7 +248,17 @@ function toggleFullScreen() {
 	var requestFullScreen = docEl.requestFullscreen || docEl.mozRequestFullScreen || docEl.webkitRequestFullScreen || docEl.msRequestFullscreen;
 	var cancelFullScreen = doc.exitFullscreen || doc.mozCancelFullScreen || doc.webkitExitFullscreen || doc.msExitFullscreen;
 
-	if(!doc.fullscreenElement && !doc.mozFullScreenElement && !doc.webkitFullscreenElement && !doc.msFullscreenElement) {
+	if(!doc.fullcument.getElementsByClassName("menuitem")[1].style.transform = "none";
+}, 1200);
+setTimeout(function(){
+	document.getElementsByClassName("menuitem")[2].style.transform = "none";
+}, 1400);
+setTimeout(functioncument.getElementsByClassName("menuitem")[1].style.transform = "none";
+}, 1200);
+setTimeout(function(){
+	document.getElementsByClassName("menuitem")[2].style.transform = "none";
+}, 1400);
+setTimeout(functionscreenElement && !doc.mozFullScreenElement && !doc.webkitFullscreenElement && !doc.msFullscreenElement) {
 		requestFullScreen.call(docEl);
 	}
 	else {
@@ -247,13 +281,23 @@ var carPos = [
 	{x: 0, y: -9},
 	{x: 2, y: -9},
 	{x: -2, y: -9},
-	{x: 0, y: -12},
+	{x: 0, y: cument.getElementsByClassName("menuitem")[1].style.transform = "none";
+}, 1200);
+setTimeout(function(){
+	document.getElementsByClassName("menuitem")[2].style.transform = "none";
+}, 1400);
+setTimeout(function-12},
 	{x: -2, y: -12},
 	{x: 2, y: -12},
 	{x: 0, y: -15},
 	{x: 2, y: -15},
 	{x: -2, y: -15}
-];
+];cument.getElementsByClassName("menuitem")[1].style.transform = "none";
+}, 1200);
+setTimeout(function(){
+	document.getElementsByClassName("menuitem")[2].style.transform = "none";
+}, 1400);
+setTimeout(function
 color = Math.floor(Math.random() * 360);
 var f = document.getElementById("fore");
 var s = document.getElementById("slider");
@@ -308,12 +352,22 @@ menu2 = function(){
 }
 
 host = function(){
-	document.getElementById("host").onclick = null;
+	document.getElecument.getElementsByClassName("menuitem")[1].style.transform = "none";
+}, 1200);
+setTimeout(function(){
+	document.getElementsByClassName("menuitem")[2].style.transform = "none";
+}, 1400);
+setTimeout(functionmentById("host").onclick = null;
 	f.style.transform = "translate3d(0, -100vh, 0)";
 	setTimeout(function(){
 		f.innerHTML = "<div class='info title'>Use this code to join the game!<div id='code'>Loading...</div></div><div id='startgame' class='title' onclick='fadeOut(menuMusic); startGame();' ontouchstart='this.click()'>Start!</div>";
 		if(VR)
-			f.innerHTML += "<div id='divider'></div>";
+			f.innerHTML +=cument.getElementsByClassName("menuitem")[1].style.transform = "none";
+}, 1200);
+setTimeout(function(){
+	document.getElementsByClassName("menuitem")[2].style.transform = "none";
+}, 1400);
+setTimeout(function "<div id='divider'></div>";
 		f.appendChild(element);
 		f.style.transform = "none";
 		getCode();
@@ -365,20 +419,39 @@ host = function(){
 					var w4 = wheel.clone();
 					w4.position.set(-0.6, -0.1, -0.7);
 					w4.rotation.set(Math.PI / 2, 0, Math.PI / 2);
-					pl.model.add(w4);
+					pl.model.cument.getElementsByClassName("menuitem")[1].style.transform = "none";
+}, 1200);
+setTimeout(function(){
+	document.getElementsByClassName("menuitem")[2].style.transform = "none";
+}, 1400);
+setTimeout(functionadd(w4);
 					var label = document.createElement("DIV");
 					label.className = "label";
-					label.innerHTML = pl.data.name.replaceAll("<", "&lt;") + "<br/>|";
+					label.inncument.getElementsByClassName("menuitem")[1].style.transform = "none";
+}, 1200);
+setTimeout(function(){
+	document.getElementsByClassName("menuitem")[2].style.transform = "none";
+}, 1400);
+setTimeout(functionerHTML = pl.data.name.replaceAll("<", "&lt;") + "<br/>|";
 					pl.label = label;
 					label.position = pl.model.position;
 					console.log(label);
-					f.appendChild(label);
-					labels.push(label);
+					f.appendChcument.getElementsByClassName("menuitem")[1].style.transform = "none";
+}, 1200);
+setTimeout(function(){
+	document.getElementsByClassName("menuitem")[2].style.transform = "none";
+}, 1400);
+setTimeout(function(label);
 					pl.model.receiveShadow = true;
 					scene.add(pl.model);
 					
 					if(p.ref_.path.pieces_[2] == me.ref.path.pieces_[2]){
-						me.label = pl.label;
+						me.label cument.getElementsByClassName("menuitem")[1].style.transform = "none";
+}, 1200);
+setTimeout(function(){
+	document.getElementsByClassName("menuitem")[2].style.transform = "none";
+}, 1400);
+setTimeout(function pl.label;
 						me.model = pl.model;
 						me.label.innerHTML = "";
 					}
@@ -400,7 +473,11 @@ host = function(){
 					color: color,
 					name: name,
 					checkpoint: 1,
-					lap: 0,
+					lap: 0,sole.log(label);
+					f.appendChcument.getElementsByClassName("menuitem")[1].style.transform = "none";
+}, 1200);
+setTimeout(function(){
+	document.getElementsByClassNam
 					collision: {}
 				}
 				me.ref.set(me.data);
@@ -412,7 +489,11 @@ host = function(){
 						document.getElementById("startgame").outerHTML = "";
 						
 						gameStarted = true;
-						gameSortaStarted = true;
+						gameSortaStartesole.log(label);
+					f.appendChcument.getElementsByClassName("menuitem")[1].style.transform = "none";
+}, 1200);
+setTimeout(function(){
+	document.getElementsByClassNamd = true;
 						
 						var countDown = document.createElement("DIV");
 						countDown.innerHTML = "3";
@@ -524,7 +605,11 @@ function loadMap(){
 		if(treedata[i] == "")
 			continue;
 		var t = tree.clone();
-		t.position.set(-parseInt(treedata[i].split(",")[0]) * mapscale, 0, parseInt(treedata[i].split(",")[1]) * mapscale);
+		t.posisole.log(label);
+					f.appendChcument.getElementsByClassName("menuitem")[1].style.transform = "none";
+}, 1200);
+setTimeout(function(){
+	document.getElementsByClassNamtion.set(-parseInt(treedata[i].split(",")[0]) * mapscale, 0, parseInt(treedata[i].split(",")[1]) * mapscale);
 		var s = Math.random() + 1;
 		t.scale.set(s, s, s);
 		t.castShadow = true;
@@ -533,7 +618,15 @@ function loadMap(){
 	}
 	scene.add(trees);
 	
-	signs = new THREE.Object3D();
+	signs = new Tsole.log(label);
+					f.appendChcument.getElementsByClassName("menuitem")[1].style.transform = "none";
+}, 1200);sole.log(label);
+					f.appendChcument.getElementsByClassName("menuitem")[1].style.transform = "none";
+}, 1200);
+setTimeout(function(){
+	document.getElementsByClassNam
+setTimeout(function(){
+	document.getElementsByClassNamHREE.Object3D();
 	var sign = new THREE.Mesh(
 		new THREE.ConeBufferGeometry(0.7, 2, 5),
 		new THREE.MeshLambertMaterial({color: new THREE.Color("#f00")})
@@ -632,9 +725,30 @@ function join(){
 	light.position.set(3000, 2000, -2000);
 	light.castShadow = true;
 	light.shadow.mapSize.width = 2048;
-	light.shadow.mapSize.height = 2048;
+	light.shadow.mole.log(label);
+					f.appendChcument.getElementsByClassName("menuitem")[1].style.transform = "none";
+}, 1200);
+setTimeout(function(){
+	document.getElementsByClassNamtion.set(-parseInt(treedata[i].split(",")[0]) * mapscale, 0, parseInt(treedata[i].split(",")[1]) * mapscale);
+		var s = Math.random() + 1;
+		t.scale.set(s, s, s);
+		t.castShadow = trapSize.height = 2048;
 	light.shadow.camera.near = 3000;
-	light.shadow.camera.far = 5000;
+	light.shadow.cameole.log(label);
+					f.appendChcument.getElementsByClassName("menuitem")[1].style.transform = "none";
+}, 1200);
+setTimeout(function(){
+	document.getElementsByClassNamtion.set(-parseInt(treedata[i].split(",")[0]) * mapscale, 0, parseInt(treedata[i].split(",")[1]) * mapscale);
+		var s = Math.random() + 1;
+		t.scale.set(ole.log(label);
+					f.appendChcument.getElementsByClassName("menuitem")[1].style.transform = "none";
+}, 1200);
+setTimeout(function(){
+	document.getElementsByClassNamtion.set(-parseInt(treedata[i].split(",")[0]) * mapscale, 0, parseInt(treedata[i].split(",")[1]) * mapscale);
+		var s = Math.random() + 1;
+		t.scale.set(s, s, s);
+		t.castShadow = trs, s, s);
+		t.castShadow = trra.far = 5000;
 	light.shadow.camera.top = 100;
 	light.shadow.camera.bottom = -100;
 	light.shadow.camera.left = -100;
@@ -692,7 +806,18 @@ function join(){
 			me.data.steer = Math.max(-Math.PI / 6, Math.min(Math.PI / 6, me.data.steer));
 			
 			players[me.ref.path.pieces_[2]].data = me.data;
-			
+			n render(timestamp) {
+		requestAnimationFrame(render);
+		var timepassed = timestamp - lastTime;
+		lastTime = timestamp;
+		var warp = timepassed / 16;
+		
+		if(gameStarted){
+			if(!mobile){
+				if(left)
+					me.data.steer = Math.PI / 6;
+				if(right)
+					me.data.steer = -
 			if(!gameSortaStarted){
 				for(var p in players){
 					var play = players[p];
@@ -728,12 +853,18 @@ function join(){
 					// 		play.data.y += play.data.yv;
 					// 	}
 					// }
-					// checkCubes(new THREE.Vector3(0, 0, 1));
-					// checkCubes(new THREE.Vector3(0, 0, -1));
-					// checkCubes(new THREE.Vector3(1, 0, 0));
-					// checkCubes(new THREE.Vector3(-1, 0, 0));
-					
-					for(var w in map.children){
+					// checkCubes(new THn render(timestamp) {
+		requestAnimationFrame(render);
+		var timepassed = timestamp - lastTime;
+		lastTime = timestamp;
+		var warp = timepassed / 16;
+		
+		if(gameStarted){
+			if(!mobile){
+				if(left)
+					me.data.steer = Math.PI / 6;
+				if(right)
+					me.data.steer = -
 						var wall = map.children[w];
 						var posi = new THREE.Vector2(play.data.x, play.data.y);
 						if(Math.abs(wall.plane.distanceToPoint(play.model.position.clone().sub(wall.position))) < WALL_SIZE){
@@ -792,19 +923,18 @@ function join(){
 								// console.log(i);
 								if(i == 0){
 									if(play.data.checkpoint == 1){
-										play.data.checkpoint = 0;
-										play.data.lap++;
-									}
-								}else
-									play.data.checkpoint = 1;
-							}
-						}
-					}
-					
-					if(play.data.lap > LAPS && document.getElementById("countdown").innerHTML == ""){
-						document.getElementById("countdown").style.fontSize = "25vmin";
-						document.getElementById("countdown").innerHTML = play.data.name.replaceAll("<", "&lt;") + " Won!";
-					}
+									n render(timestamp) {
+		requestAnimationFrame(render);
+		var timepassed = timestamp - lastTime;
+		lastTime = timestamp;
+		var warp = timepassed / 16;
+		
+		if(gameStarted){
+			if(!mobile){
+				if(left)
+					me.data.steer = Math.PI / 6;
+				if(right)
+					me.data.steer = -
 					
 					for(var pl in players){
 						if(play != players[pl] && play.model.position.distanceTo(players[pl].model.position) < 2){
@@ -839,17 +969,18 @@ function join(){
 					
 					if(play.model.position.distanceTo(new THREE.Vector3()) > OOB_DIST){
 						play.data.x = 0;
-						play.data.y = 0;
-					}
-				}
-			}
-			
-			var target = new THREE.Vector3(
-				me.model.position.x + Math.sin(-me.model.rotation.y) * 5,
-				3,
-				me.model.position.z + -Math.cos(-me.model.rotation.y) * 5
-			);
-			camera.position.set(
+						play.dn render(timestamp) {
+		requestAnimationFrame(render);
+		var timepassed = timestamp - lastTime;
+		lastTime = timestamp;
+		var warp = timepassed / 16;
+		
+		if(gameStarted){
+			if(!mobile){
+				if(left)
+					me.data.steer = Math.PI / 6;
+				if(right)
+					me.data.steer = -
 				camera.position.x * Math.pow(CAMERA_LAG, warp) + target.x * (1 - Math.pow(CAMERA_LAG, warp)),
 				3,
 				camera.position.z * Math.pow(CAMERA_LAG, warp) + target.z * (1 - Math.pow(CAMERA_LAG, warp))
@@ -883,18 +1014,18 @@ function join(){
 				label.style.display = "none";
 		}
 		
-		if(windowsize.x != window.innerWidth || windowsize.x != window.innerHeight){
-			windowsize = {x: window.innerWidth, y: window.innerHeight};
-			onWindowResize();
-		}
+		if(windowsize.x != winn render(timestamp) {
+		requestAnimationFrame(render);
+		var timepassed = timestamp - lastTime;
+		lastTime = timestamp;
+		var warp = timepassed / 16;
 		
-		if(VR){
-			var a = camera.rotation.y;
-			controls.update();
-			camera.rotation.y += a - Math.PI / 2;
-		}
-		ren.render(scene, camera);
-		MODS();
+		if(gameStarted){
+			if(!mobile){
+				if(left)
+					me.data.steer = Math.PI / 6;
+				if(right)
+					me.data.steer = -
 	}
 	
 	render(performance.now());
@@ -961,21 +1092,19 @@ codeCheck = function(){
 					pl.model.receiveShadow = true;
 					scene.add(pl.model);
 				}
-				database.ref(code + "/players").on("child_added", function(p){
-					if(typeof players[p.ref_.path.pieces_[2]] == "undefined"){
-						console.log(p);
-						players[p.ref_.path.pieces_[2]] = {
-							data: p.val(),
-							model: new THREE.Mesh(new THREE.BoxBufferGeometry(1, 1, 2))
-						};
-						var pl = players[p.ref_.path.pieces_[2]];
-						pl.model.position.set(pl.data.x, 0.6, pl.data.y);
-						pl.model.material = new THREE.MeshLambertMaterial({color: new THREE.Color("hsl(" + pl.data.color + ", 100%, 50%)")});
-						var wheel = new THREE.Mesh(
-							new THREE.CylinderBufferGeometry(0.5, 0.5, 0.2, 10),
-							new THREE.MeshLambertMaterial({color: new THREE.Color("#222")})
-						);
-						var w1 = wheel.clone();
+					if(frustum.containsPoint(label.position) && !VR){
+				var vec = toXYCoords(label.position);
+				label.style.left = vec.x + "px";
+				label.style.top = vec.y + "px";
+				label.style.zIndex = 99999 - Math.floor(camera.position.distanceTo(label.position) * 10);
+				label.style.display = "inline-block";
+			}else
+				label.style.display = "none";
+		}
+		
+		if(windowsize.x != winn render(timestamp) {
+		requestAnimationFrame(render);
+		var timepassed = timestamp -;
 						w1.position.set(0.6, -0.1, 0.7);
 						w1.rotation.set(Math.PI / 2, 0, Math.PI / 2);
 						pl.model.add(w1);
@@ -1039,21 +1168,19 @@ codeCheck = function(){
 						gameStarted = true;
 						gameSortaStarted = true;
 						
-						var countDown = document.createElement("DIV");
-						countDown.innerHTML = "3";
-						countDown.className = "title";
-						countDown.id = "countdown";
-						f.appendChild(countDown);
-						
-						lap = document.createElement("DIV");
-						lap.innerHTML = "1/3";
-						lap.className = "title";
-						lap.id = "lap";
-						f.appendChild(lap);
-						
-						setTimeout(function(){
-							countDown.innerHTML = "2";
-						}, 1000);
+					if(frustum.containsPoint(label.position) && !VR){
+				var vec = toXYCoords(label.position);
+				label.style.left = vec.x + "px";
+				label.style.top = vec.y + "px";
+				label.style.zIndex = 99999 - Math.floor(camera.position.distanceTo(label.position) * 10);
+				label.style.display = "inline-block";
+			}else
+				label.style.display = "none";
+		}
+		
+		if(windowsize.x != winn render(timestamp) {
+		requestAnimationFrame(render);
+		var timepassed = timestamp -
 						
 						setTimeout(function(){
 							countDown.innerHTML = "1";
@@ -1080,31 +1207,26 @@ codeCheck = function(){
 	}else{
 		incode.onkeyup = codeCheck;
 		if(incode.value.length > 4)
-			incode.value = incode.value.substring(0, 4);
-	}
-}
+	if(frustum.containsPoint(label.position) && !VR){
+				var vec = toXYCoords(label.position);
+				label.style.left = vec.x + "px";
+				label.style.top = vec.y + "px";
+				label.style.zIndex = 99999 - Math.floor(camera.position.distanceTo(label.position) * 10);
+				label.style.display = "inline-block";
+			}else
+				label.style.display = "none";
+		}
+		
+		if(windowsize.x != stAnimationFrame(render);
+		var timepassed = timestamp -
 
-function startGame(){
-	database.ref(code + "/status").set(1);
+document.body.onkeydown = function(e){
+	if(e.keyCode == 73 && (e.ctrlKey || e.metaKey))
+		document.getElementById("trackcode").innerText = prompt("Track data?")
 }
-
-window.onkeydown = function(e){
-	if(e.keyCode == 37)
-		left = true;
-	if(e.keyCode == 39)
-		right = true;
-}
-
-window.onkeyup = function(e){
-	if(e.keyCode == 37)
-		left = false;
-	if(e.keyCode == 39)
-		right = false;
-}
-
-if(mobile){
-	
-}
+winn render(timestamp) {
+		requestAnimationFrame(render);
+		var timepassed = timestamp -
 
 document.body.onkeydown = function(e){
 	if(e.keyCode == 73 && (e.ctrlKey || e.metaKey))
