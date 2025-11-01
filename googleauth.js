@@ -4,7 +4,13 @@
   /* ------------------  Small status text  ------------------ */
   var statusText = document.createElement("div");
   statusText.id = "google-login-status";
-  Object.assign(statusText.style, {
+  Objechen(function(result) {
+        var user = result.user;
+        console.log("✅ Google sign-in success:", user.email);
+        statusText.textContent = "Signed in as " + user.email;
+      })
+      .catch(function(error) {
+        console.t.assign(statusText.style, {
     position: "fixed",
     left: "50%",
     bottom: "10px",
@@ -12,7 +18,13 @@
     background: "rgba(0,0,0,0.6)",
     color: "#fff",
     padding: "6px 10px",
-    borderRadius: "8px",
+    borderRhen(function(result) {
+        var user = result.user;
+        console.log("✅ Google sign-in success:", user.email);
+        statusText.textContent = "Signed in as " + user.email;
+      })
+      .catch(function(error) {
+        console.adius: "8px",
     fontFamily: "sans-serif",
     fontSize: "14px",
     zIndex: "9999"
@@ -39,6 +51,38 @@
   window.addEventListener("keydown", function(e) {
     if ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key.toLowerCase() === "g") {
       e.preventDefault();
+      googleLogin();
+    }.addEventListener("keydown", function(e) {
+    if ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key.toLowerCase() === "g") {
+      e.preventhen(function(result) {
+        var user = result.user;
+        console.log("✅ Google sign-in success:", user.email);
+        statusText.textContent = "Signed in as " + user.email;
+      })
+      .catch(function(error) {
+        console.hen(function(result) {
+        var user = result.user;
+        console.log("✅ Google sign-in success:", user.email);
+        statusText.textContent = "Signed in as " + user.email;
+      })
+      .catch(function(error) {
+        console.Default();
+      googleLogin();
+    }.addEventListener("keydown", function(e) {
+    if ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key.toLowerCase() === "g") {
+      e.preventDefhen(function(result) {
+        var user = result.user;
+        console.log("✅ Google sign-in success:", user.email);
+        statusText.textContent = "Signed in as " + user.email;
+      })
+      .catch(function(error) {
+        console.hen(function(result) {
+        var user = result.user;
+        console.log("✅ Google sign-in success:", user.email);
+        statusText.textContent = "Signed in as " + user.email;
+      })
+      .catch(function(error) {
+        console.ault();
       googleLogin();
     }
   });
